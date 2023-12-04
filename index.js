@@ -5,22 +5,29 @@ class hero{
         this.typeOfHero = typeOfHero;
     }
     
-    atacar(){
-    	if (this.typeOfHero = "Mago") {
-        	return "magia";
-        } else if (this.typeOfHero = "Guerreiro") {
-        	return "espada";
-        } else if (this.typeOfHero = "Monge") {
-        	return "artes marciais";
-        } else if (this.typeOfHero = "Ninja") {
-        	return "shuriken";          
-        }
+    atack(){
+      let ataque = ""
+    	if (this.typeOfHero === "Mago") {
+        	ataque = "magia";
+        } else if (this.typeOfHero === "Guerreiro") {
+        	ataque = "espada";
+        } else if (this.typeOfHero === "Monge") {
+        	ataque = "artes marciais";
+        } else if (this.typeOfHero === "Ninja") {
+        	ataque = "shuriken";          
+        } 
+      console.log(`O ${this.name} atacou usando ${ataque} `)       
     }
 }
 
-let heroi = new hero("Thomaz", 33, "Guerreiro")
-let heroi2 = new hero("Naruto", 23, "Monge")
-let ataque = heroi2.atacar()
-console.log(`O ${heroi2.typeOfHero} atacou usando ${ataque}`)
-console.log(heroi2.typeOfHero)
-console.log(heroi.typeOfHero)
+let heroiMago = new hero("Merlin", 65, "Mago")
+heroiMago.atack()
+
+let heroiGuerreiro = new hero("Kratos", 44, "Guerreiro")
+heroiGuerreiro.atack()
+
+let heroiMonge = new hero("Aang", 15, "Monge")
+heroiMonge.atack()
+
+let heroiNinja = new hero("Naruto", 18, "Ninja")
+heroiNinja.atack()
